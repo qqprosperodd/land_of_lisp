@@ -1,3 +1,3 @@
 # Land of Lisp
 
-![top-page](https://github.com/qqprosperodd/share_miyasaka/blob/images/alien.jpg)
+![top-page](https://github.com/qqprosperodd/land_of_lisp/blob/images/alien.jpg)
