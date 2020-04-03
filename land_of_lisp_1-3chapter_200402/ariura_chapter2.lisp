@@ -1,5 +1,3 @@
-; 2-2
-
 ; program1
 ; guess-my-number : select one number(1~100)
 ; smaller : select less number than guess-my-number
@@ -69,3 +67,4 @@
 ; flet can't do this.
 ; flet can't refer to outer function.
 ; labels is called recursion function.
+; flet is unnecessary?

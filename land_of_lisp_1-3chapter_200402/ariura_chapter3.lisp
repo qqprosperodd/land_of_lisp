@@ -1,5 +1,5 @@
 ; syntax and semantics
-; syntax is legally as single sentence.
+; syntax is legal as single sentence.
 ; semantics is meaningful as single sentence.
 
 ; lisp only has () as syntax.
@@ -33,7 +33,7 @@
 (expt 2 (+ 3 4))
 
 ; data mode
-; compiler eval data mode as data.
+; compiler evaluates data mode as data.
 '(expt 2 3)
 
 ; list
