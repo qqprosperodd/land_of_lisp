@@ -56,8 +56,8 @@
     (f 5))
 ; one flet can defun over 2 functions.
 
-(flet ((f (n) (+ n 10)))
-      ((g (n) (- n 3)))
+(flet ((f (n) (+ n 10))
+       (g (n) (- n 3)))
       (g (f 5)))
 
 ; labels
