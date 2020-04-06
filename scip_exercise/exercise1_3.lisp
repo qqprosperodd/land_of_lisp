@@ -14,3 +14,11 @@
   (apply #'+ (cdr (sort (mapcar (lambda (n) (* n n)) A) #'<))))
 (procedure2 '(4 6 8))
 ; this is better?
+
+; if argument length =3
+(defun procedure3 (A)
+  (cond ((eq (length A) 3) (apply #'+ (cdr (sort (mapcar (lambda (n) (* n n)) A) #'<))))
+          (t '(list length must be 3.))))
+
+(procedure3 '(4 6 8))
+(procedure3 '(4 6 8 2))
