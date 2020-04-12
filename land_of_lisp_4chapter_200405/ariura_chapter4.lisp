@@ -32,7 +32,7 @@
 
 (if (oddp 5)
     'odd-number
-    'even-number')
+    'even-number)
 ; oddp returns True if argument is odd.
 ; evenp returns True if argument is even.
 
@@ -73,7 +73,7 @@
         (t                    '(why you eat my pudding stranger ?))))
 (pudding-eater 'johnny)
 *arch-enemy*
-(puddin-eater 'george-clooney)
+(pudding-eater 'george-clooney)
 ; cond is great.
 ; case
 (defun pudding-eater (person)

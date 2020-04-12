@@ -14,7 +14,7 @@
   (cadr (assoc location nodes)))
 (describe-location 'living-room *nodes*)
 
-(defparameter *edegs* '((living-room (garden west door)
+(defparameter *edges* '((living-room (garden west door)
                                     (attic upstairs ladder))
                       (garden (living-room east door))
                       (attic (living-room downstairs ladder))))
@@ -34,9 +34,9 @@
 
 (cdr (assoc 'living-room *edges*))
 ; ((garden west door) (attic upstairs ladder))
-(mapcar #'describe-path ((garden west door) (attic upstairs ladder)))
+(mapcar #'describe-path '((garden west door) (attic upstairs ladder)))
 ; ((there is a door going west from here.) (there is a ladder going upstairs from here.))
-(mapcar #'sqrt (1 2 3 4 5))
+(mapcar #'sqrt '(1 2 3 4 5))
 ; mapcar multiply function to arguments.
 ; mapcar is called higher-order function.
 (mapcar #'car '((foo bar) (baz qux)))
@@ -77,7 +77,7 @@
 (defun describe-objects (loc objs obj-loc)
   (labels ((describe-obj (obj)
               `(you see a ,obj n the floor.)))
-      (apply #'append (mapcar #'describe-obj (obects-at loc objs obj-loc)))))
+      (apply #'append (mapcar #'describe-obj (objects-at loc objs obj-loc)))))
 
 (describe-objects 'living-room *objects* *object-locations*)
 
