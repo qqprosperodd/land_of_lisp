@@ -6,6 +6,6 @@ PDF -> https://web.mit.edu/alexmv/6.037/sicp.pdf
 
 #### soluted exercises
 
-- 1-8
+- 1-3
 - 1-11
 - 1-12
