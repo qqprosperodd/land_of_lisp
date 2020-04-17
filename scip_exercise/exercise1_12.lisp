@@ -12,6 +12,9 @@
 ; layer6 1 5 10 10 5 1
 ; layer7 1 6 15 20 15 6 1
 
+; if number = 1, number = layer : 1
+; else Pascal(layer,number) = Pascal(layer-1,number) + Pascal(layer-1,number-1)
+
 (defun pascal (layer number)
   (cond ((eql number 1) 1)
         ((eql number layer) 1)
