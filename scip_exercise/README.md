@@ -4,7 +4,7 @@ PDF -> https://web.mit.edu/alexmv/6.037/sicp.pdf
 
 ![top-page](https://github.com/qqprosperodd/land_of_lisp/blob/images/SICP_cover.jpg)
 
-#### soluted exercises
+#### exercises that is finished
 
 - 1-3
 - 1-11
