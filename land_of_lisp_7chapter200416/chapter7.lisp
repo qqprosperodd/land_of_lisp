@@ -113,7 +113,7 @@
   (edges->dot edges)
   (princ "}"))
 (graph->dot *wizard-nodes* *wizard-edges*)
-digraph{
+; digraph{
 ; LIVING_ROOM[label="(LIVING-ROOM (YOU ARE IN TH..."];
 ; GARDEN[label="(GARDEN (YOU ARE IN A BEAUT..."];
 ; ATTIC[label="(ATTIC (YOU ARE IN THE ATTI..."];
@@ -128,15 +128,16 @@ digraph{
                     :direction :output
                     :if-exists :supersede)
     (funcall thunk))
-  (ext:shell (concatenate 'string "dot Tpng -0 " frame)))
+; (ext:shell (concatenate 'string "dot Tpng -0 " frame)))
+  (sb-ext:run-program "dot" `("-Tpng" "-O" ,fname) :search t))
 ; thunk have no argument.
 ; this is nullary function.
 ; thunk is a subroutine used to inject an additional calculation into another subroutine.
 (with-open-file (my-stream
                 "testfile.txt"
                 :direction :output
-                :if-exists :supersede
-  (princ "Hello File!" my-stream)))
+                :if-exists :supersede)
+  (princ "Hello File!" my-stream))
 ; make stream
 ; (with-open-file (my-stream ...))
 ; define my-stream
