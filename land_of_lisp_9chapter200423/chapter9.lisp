@@ -13,7 +13,7 @@
 (setf foo (list 'a 'b 'c))
 (second foo)
 (setf (second foo) 'z)
-(foo)
+foo
 ;
 (setf foo (make-array 4))
 (setf (aref foo 2) (list 'x 'y 'z))
@@ -279,7 +279,7 @@ foo
           (if (monster-dead m)
               (progn (princ "That monster is already dead.")
                      (pick-monster))
-              m))))
+              m)))))
 ;
 (defun init-monsters ()
   (setf *monsters*
