@@ -19,9 +19,9 @@
 ; 10 - 3 + 2 ???
 (format t "I am printing ~,,4a in the middle of this sentence." "foo")
 ; third parameter ,,4
-(format t "the word ~,,4 '!a feels very important." "foo")
+(format t "the word ~,,4,'!a feels very important." "foo")
 ; The fourth control sequence parameter specifies which character will be used for padding
-(format t "the word ~,,4 '!@a feels very important." "foo")
+(format t "the word ~,,4,'!@a feels very important." "foo")
 ;
 (format t "The number 1000 in hexadecimal is ~x" 1000)
 ; ~x represent in hexadecimal (base-16)
