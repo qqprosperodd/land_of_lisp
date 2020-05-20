@@ -66,7 +66,7 @@ userid=foo&password=supersecretpassword
                 (case (car lst)
                   (#\% (cons (http-char (cadr lst) (caddr lst))
                              (f (cdddr lst))))
-                  (#\% (cons #\space (f (cdr lst))))
+                  (#\+ (cons #\space (f (cdr lst))))
                   (otherwise (cons (car lst) (f (cdr lst))))))))
     (coerce (f (coerce s 'list)) 'string)))
 ;
@@ -88,7 +88,7 @@ userid=foo&password=supersecretpassword
   (let* ((url (subseq s
                       (+ 2 (position #\space s))
                       (position #\space s :from-end t)))
-          ((x (position #\? url)))
+          (x (position #\? url)))
     (if x
         (cons (subseq url 0 x) (parse-params (subseq url (1+ x))))
         (cons url '()))))
@@ -135,7 +135,7 @@ bar: abc, 123
   (if (equal path "greeting")
       (let ((name (assoc 'name params)))
         (if (not name)
-            (princ "<html><format>What is your name?<input name='name' />
+            (princ "<html><form>What is your name?<input name='name' />
 </form></html>")
             (format t "<html>Nice to meet you, ~a!</html>" (cdr name))))
       (princ "Sorry... I don't know the page.")))
