@@ -75,10 +75,19 @@
   (if (equal path "greeting")
       (let ((name (assoc 'name params)))
         (if (not name)
-            (princ "<html><form>What is your name?<input name='name' />
-</form></html>")
-            (format t "<html>Nice to meet you, ~a!</html>" (cdr name))))
-      (princ "Sorry... I don't know the page.")))
+	    (progn
+	      (format t "HTTP/1.1 200 OK~C~C" #\return #\linefeed)
+	      (format t "~C~C" #\return #\linefeed)
+	      (princ "<html><form>What is your name?<input name='name' />
+</form></html>"))
+	    (progn
+	      (format t "HTTP/1.1 200 OK~C~C" #\return #\linefeed)
+	      (format t "~C~C" #\return #\linefeed)
+	      (format t "<html>Nice to meet you, ~a!</html>" (cdr name)))))
+      (progn
+	(format t "HTTP/1.1 200 OK~C~C" #\return #\linefeed)
+	(format t "~C~C" #\return #\linefeed)
+	(princ "Sorry... I don't know the page."))))
 
 
 
