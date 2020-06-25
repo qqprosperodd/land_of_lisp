@@ -233,7 +233,7 @@
       (previous (make-hash-table :test #'equalp)))
   (defun game-tree (&rest rest)
     (or (gethash rest previous)
-    (setf (gethash rest previous) (apply olg-game-tree rest)))))
+    (setf (gethash rest previous) (apply old-game-tree rest)))))
 ;
 (let ((old-rate-position (symbol-function 'rate-position))
       (previous (make-hash-table)))
