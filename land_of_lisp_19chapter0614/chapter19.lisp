@@ -108,7 +108,10 @@
 
 (defun dod-request-handler (path header params)
   (if (equal path "game.html")
-      (progn (princ "<!doctype html>")
+      (progn (princ "HTTP/1.1 200 OK")
+	     (terpri)
+	     (terpri)
+	     (princ "<!doctype html>")
              (tag center ()
                   (princ "Welcome to DICE OF DOOM!")
                   (tag br ())
